@@ -78,6 +78,7 @@ class Student
        SELECT COUNT(grade > 10) FROM students
     SQL
     DB[:conn].execute(sql)
+    # binding.pry
   end
 
   def self.first_X_students_in_grade_10(x)
@@ -86,6 +87,7 @@ class Student
     SQL
 
     s = DB[:conn].execute(sql, x)
+    # binding.pry
   end
 
   def self.first_student_in_grade_10
